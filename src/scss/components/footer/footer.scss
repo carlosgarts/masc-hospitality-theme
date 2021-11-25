@@ -1,0 +1,95 @@
+@import 'menu.scss';
+
+.site-footer {
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 5vw 5vw;
+    color: black;
+    align-items: center;
+    @media (min-width: 800px) {
+        grid-template-columns: 0.5fr 1.5fr;
+    }
+    #footer-brand {
+        width: 250px;
+        grid-row: 1 / 3;
+        margin-left: auto;
+        margin-right: auto;
+        @media (min-width: 800px) {
+            width: 330px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .brand {
+            width: 100%;
+            height: auto;
+        }
+    }
+    #footer-links {
+        #secondary-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            @media (min-width: 800px) {
+                justify-content: flex-end;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            @include selected-foot-menu-item(unselected);
+        }
+    }
+    #footer-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        @media (min-width: 800px) {
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-flow: row;
+        }
+        .socials {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+                width: 25px;
+                margin-left: 20px;
+                margin-top: 20px;
+                a {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        .info {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-left: 0;
+            margin-top: 20px;
+            @media (min-width: 800px) {
+                margin-left: 50px;
+                margin-top: 0;
+            }
+            p {
+                transition: 0.5s;
+                margin: 5px;
+                font-size: 14px;
+                @media (min-width: 1000px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

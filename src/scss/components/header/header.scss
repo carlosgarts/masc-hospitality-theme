@@ -1,0 +1,107 @@
+@import 'socials.scss';
+@import 'menu.scss';
+
+#site-main-brand {
+    width: 100px;
+    height: auto;
+    padding: 0;
+    position: fixed;
+    top: 3vh;
+    right: 3vh;
+    z-index: 50;
+    @media (min-width: 600px) {
+        width: 150px;
+        top: 5vh;
+        right: 5vh;
+    }
+    .brand {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+#menu-open {
+    @include menu-bars;
+    z-index: 50;
+}
+
+#screen-blocker {
+    transition: 0.5s;
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(black, 0.2);
+    z-index: 55;
+    &.toggled {
+        display: block;
+    }
+}
+
+#main-menu {
+    transition: 0.5s;
+    display: block;
+    height: 100vh;
+    width: 80%;
+    max-width: 600px;
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    background-color: #EFEFEF;
+    color: black;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius:50px;
+    padding: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    &.toggled {
+        left: 0;
+    }
+    .menu-socials {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .quit {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                height: auto;
+                width: 45px;
+                @media (min-width: 600px) {
+                    width: 62px;
+                }
+            }
+            
+        }
+        @include social-icons;
+    }
+    .navigation {
+        @include navi-bar;
+    }
+    .menu-contact {
+        p {
+            line-height: 1;
+            font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (600 - 300)));
+            @media (min-width: 600px) {
+                font-size: 16px;
+            }
+            span {
+                display: block;
+                background-color: black;
+                color: white;
+                padding: 10px;
+                margin-right: 10px;
+                @media (min-width: 600px) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

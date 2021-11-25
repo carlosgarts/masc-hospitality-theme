@@ -1,0 +1,56 @@
+@mixin selected-foot-menu-item($selected) {
+
+    @if $selected==selected {
+        a {
+            &::after {
+                transition: 0.5s;
+                content: '';
+                display: block;
+                background-color: black;
+                height: 7px;
+                width: 120%;
+                position: absolute;
+                left: -10%;
+                top: 50%;
+            }
+        }
+    }
+
+    @if $selected==unselected {
+        a {
+            color: black;
+            text-decoration: none;
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: calc(18px + (40 - 18) * ((100vw - 300px) / (1000 - 300)));
+            font-weight: bold;
+            line-height: 1;
+            margin-left: 20px;
+            text-transform: uppercase;
+            @media (min-width: 1000px) {
+                font-size: 40px;
+                margin-left: 50px;
+            }
+
+            &::after {
+                transition: 0.5s;
+                content: '';
+                display: block;
+                background-color: black;
+                height: 7px;
+                width: 0%;
+                position: absolute;
+                left: -10%;
+                top: 50%;
+            }
+
+            &:hover {
+                &::after {
+                    width: 120%;
+                }
+            }
+        }
+    }
+}
