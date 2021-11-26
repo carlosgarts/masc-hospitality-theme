@@ -1,5 +1,15 @@
 @import 'menu.scss';
 
+.quoted-bottom {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 80px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
 .site-footer {
     background-color: white;
     width: 100%;

@@ -1,0 +1,42 @@
+.intro-about-us {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 10vh;
+    @media(min-width: 700px) {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 25vh;
+    }
+    .text {
+        padding: 0 5vw;
+        h2 {
+            font-weight: 900;
+            font-size: calc(40px + (82 - 40) * ((100vw - 300px) / (1000 - 300)));
+            line-height: 84px;
+            text-transform: uppercase;
+            margin-top: 0;
+            @media(min-width: 1000px) {
+                font-size: 82px;
+            }
+        }
+        p {
+            font-weight: 500;
+            font-size: calc(18px + (21 - 18) * ((100vw - 300px) / (1000 - 300)));
+            line-height: 1.5;
+            @media(min-width: 1000px) {
+                font-size: 21px;
+            }
+        }
+    }
+}
+
+.mosaic-strip {
+    .st0 {
+        transition: 0.25s;
+        fill: black;
+    }
+    &:hover {
+        .st0 {
+            fill: white;
+        }
+    }
+}
