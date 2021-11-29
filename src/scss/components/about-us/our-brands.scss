@@ -1,0 +1,78 @@
+.our-brands {
+    margin: 100px 5vw;
+    @media(min-width: 1000px) {
+        margin: 150px 5vw;
+    }
+    h2 {
+        font-weight: 900;
+        font-size: calc(40px + (82 - 40) * ((100vw - 300px) / (1000 - 300)));
+        line-height: 84px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 20px;
+        @media(min-width: 1000px) {
+            font-size: 82px;
+            margin-bottom: 70px;
+        }
+    }
+    .brands-grid {
+        display: grid;
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+        grid-gap: 40px 4vw;
+        margin: 0 5vw;
+        @media (min-width: 700px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media(min-width: 1000px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        li {
+            p {
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1;
+                margin: 0;
+                font-size: calc(20px + (42 - 20) * ((100vw - 300px) / (1200 - 300)));
+                @media(min-width: 1200px) {
+                    font-size: 42px;
+                }
+                a {
+                    transition: 0.5s;
+                    color: white;
+                    &:hover {
+                        color: gray;
+                    }
+                }
+            }
+            .brand {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    transition: 0.5s;
+                    filter: grayscale(100%);
+                    width: 100%;
+                    object-fit: contain;
+                    &:hover {
+                        filter: grayscale(0%);
+                    }
+                }
+            }
+            &:nth-child(1) {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                @media (min-width: 700px) {
+                    grid-column: 2 / 4;
+                }
+                @media(min-width: 1000px) {
+                    grid-column: 3 / 5;
+                }
+            }
+        }
+        
+    }
+}

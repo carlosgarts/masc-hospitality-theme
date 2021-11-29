@@ -10,19 +10,9 @@
 
 <div class="amazing-brands">
     <h2>
-        Some Amazin Brands we work with.
+        Some Amazing Brands we work with.
     </h2>
     <div class="slider-container">
-        <div class="brand-slider">
-            <div>GEICO</div>
-            <div>Honest</div>
-            <div>Coca-cola</div>
-            <div>GEICO</div>
-            <div>Honest</div>
-            <div>Coca-cola</div>
-            <div>GEICO</div>
-            <div>Honest</div>
-            <div>Coca-cola</div>
-        </div>
+        <?php echo do_shortcode('[logo-slider cat="outer"]'); ?>
     </div>
 </div>

@@ -1,0 +1,22 @@
+.main-video-intro {
+    width: 100%;
+    position: relative;
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media(min-width: 900px){
+        margin: 250px 0;
+    }
+    #about-video {
+        width: 80%;
+        max-width: 1200px;
+        z-index: 3;
+    }
+    .logo-background {
+        width: 135vw;
+        max-width: 150vw;
+        position: absolute;
+        transform: rotate(-10deg); //15
+    }
+}

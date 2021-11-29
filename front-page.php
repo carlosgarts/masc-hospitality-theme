@@ -9,7 +9,6 @@
 
 get_header();
 ?>
-
 	<main id="primary" class="site-main page cover">
 
         <div class="main-section cover">
@@ -18,7 +17,7 @@ get_header();
         <div class="main-section full">
             <?php require get_template_directory() . '/template-parts/main-page-pieces/about-us.php'; ?>
         </div>
-        <div class="main-section full">
+        <div class="main-section slider-section full">
             <?php require get_template_directory() . '/template-parts/main-page-pieces/slider.php'; ?>
         </div>
         <div class="main-section full">
@@ -44,7 +43,6 @@ get_header();
         </div>
 
 	</main><!-- #main -->
-
 <?php
 //get_sidebar();
 get_footer();

@@ -1,18 +1,25 @@
 .amazing-brands {
     h2 {
         font-weight: bold;
-        font-size: 96px;
+        font-size: calc(30px + (96 - 30) * ((100vw - 300px) / (800 - 300)));
         text-transform: uppercase;
         text-align: center;
         width: 90%;
-        max-width: 800px;
+        margin: 70px auto;
+        max-width: 900px;
+        line-height: 1;
+        @media( min-width: 800px) {
+            font-size: 96px;
+        }
     }
     .slider-container {
         border-top: 2px solid white;
         border-bottom: 2px solid white;
         width: 100%;
-        .brand-slider {
-
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .owl-nav {
+            display: none;
         }
     }
 }

@@ -57,6 +57,7 @@
     "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map"
   },
   "dependencies": {
+    "luxy.js": "^0.1.0",
     "mini-css-extract-plugin": "^2.4.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

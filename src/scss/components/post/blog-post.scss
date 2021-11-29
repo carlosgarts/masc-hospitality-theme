@@ -1,0 +1,71 @@
+.press-page {
+    padding-top: 30vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    .post-head {
+        h1 {
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 25px 0;
+            font-size: calc(30px + (100 - 30) * ((100vw - 300px) / (1000 - 300)));
+            @media(min-width: 1000px) {
+                font-size: 100px;
+            }
+        }
+        .meta-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .date-brand {
+                height: 30px;
+                width: auto;
+                margin-right: 20px;
+            }
+            .posted-on {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 14px;
+                @media(min-width: 1000px) {
+                    font-size: 16px;
+                }
+                a {
+                    color: white;
+                }
+            }
+        }
+        .wp-post-image {
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+    .le-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        @media(min-width: 1000px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        article {
+            width: 100%;
+            max-width: 600px;
+            font-size: 20px;
+            line-height: 1.5;
+            margin: 0 auto 50px auto;
+            a {
+                color: gray;
+            }
+        }
+        .extra-info {
+            text-align: right;
+            p {
+                color: #d7d7d7;
+                font-size: 40px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    
+}
